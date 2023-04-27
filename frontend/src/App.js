@@ -1,14 +1,17 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Branch from './pages/branchForm/branch';
+import Home from './pages/home/home';
+import Staff from './pages/staff/staff';
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <Sidebar />
+        <Routes>
+        <Route path="/home" element={<Home />}/>
+        <Route path="/branch" element={<Branch />}/>
+        <Route path="/staff" element={<Staff />}/>
+        </Routes>
       </Router>
     </>
   );
