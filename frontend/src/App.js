@@ -1,14 +1,20 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Navbar from './layouts/Navbar';
+import Sidebar from './layouts/Sidebar';
+
+import Staff from './pages/staff';
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <Sidebar />
+        {/* <Navbar /> */}
+        {/* <Sidebar /> */}
+        {/* <Switch> */}
+          {/* <Route exact path="/staff" component={Staff} /> */}
+          <Staff/>
+        {/* </Switch> */}
       </Router>
     </>
   );
